@@ -1,11 +1,10 @@
-// Declaración de Variables
-let fibo1 = 1;
-let fibo2 = 1;
+// Llamamos al modulo serie para ejecutar todo el archivo.
+const serie = require('./serie');
 
-console.log(`${fibo1}`);
+// Enviamos las veces que queremos ejecutar la serie
+let cantidad = 10;
 
-for(let i = 2; i <= 7; i++){
-	console.log(`${fibo2}`);
-	fibo2 = fibo1 + fibo2;
-	fibo1 = fibo2 - fibo1;
-}
+// Capturamos el mensaje del metodo exportado.
+serie.crearSerie(cantidad)
+	.then(mensaje => console.log(mensaje))
+	.catch(mensaje => console.log(mensaje))
