@@ -11,7 +11,7 @@ let crearSerie = (cantidad) => {
 
 		serie += (`${fibo1}\t`);
 
-		for(let i = 2; i <= cantidad - 1; i++){
+		for(let i = 2; i <= cantidad; i++){
 			serie += (`${fibo2}\t`);
 			fibo2 = fibo1 + fibo2;
 			fibo1 = fibo2 - fibo1;
